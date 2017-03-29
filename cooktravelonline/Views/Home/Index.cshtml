@@ -4,25 +4,23 @@
 
 <head>
     @*<script type="text/javascript" language="javascript" id="OFrameworkJS" ThemURI="OdyAirSearch/" SkinID="default" src="https://book.cooktravel.net/web/SearchForms/OFramework.js"></script>*@
+    @*<script type="text/javascript" language="javascript" id="OFrameworkJS" themeuri="OdyResponsiveSearchForm-Blue-Air/"
+            skinid="default" src="http://book.cooktravel.net/web/SearchForms/OFramework.js"></script>*@
     <script type="text/javascript" language="javascript" id="OFrameworkJS" themeuri="OdyResponsiveSearchForm-Blue-Air/"
-            skinid="default" src="http://book.cooktravel.net/web/SearchForms/OFramework.js"></script>
+            SkinID="default" src="https://book.cooktravel.net/web/SearchForms/OFramework.js"></script>
 </head>
-<body>
-    <script language="javascript" type="text/javascript">
-        if (OFramework != null)
-        {
-            OFramework.QSParams.Add("siid", "121584")
-            OFramework.QSParams.Add("referrer", "testing query string add");
-            oAForm = OFramework.AirSearchForm(document.getElementById("AirSearchForm"));
-            //oAForm.Target = "_new";
-        }
-    </script>
 
+
+
+<!--left searchform Area Start-->
+<div class="left-searchform-area"></div>
+<div id="AirSearchForm"></div>
+<!--left searchform Area end-->
 
 <div class="jumbotron">
-    <div class="left-searchform-area"><p>{ Left Searchform Area }</p>
+    @*<div class="left-searchform-area"><p>{ Left Searchform Area }</p>
         <div id="AirSearchForm"></div>
-    </div>
+    </div>*@
 </div>
 
 <div class="row">
@@ -47,4 +45,16 @@
     </div>
 </div>
 
-</body>
+@*<footer>
+
+    <body>*@
+        <script language="javascript" type="text/javascript">
+                if (OFramework != null) {
+                    OFramework.QSParams.Add("siid", "124589")
+                    OFramework.QSParams.Add("referrer", "google");
+                    oAForm = OFramework.AirSearchForm(document.getElementById("AirSearchForm"));
+                    //oAForm.Target = "_new";
+                }
+        </script>
+    @*</body>
+</footer>*@
