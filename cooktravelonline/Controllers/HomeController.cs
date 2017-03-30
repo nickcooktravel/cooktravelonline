@@ -26,5 +26,29 @@ namespace cooktravelonline.Controllers
 
             return View();
         }
+
+        //published air
+        public ActionResult Air()
+        {
+            return View();
+        }
+
+        //hotel
+        public ActionResult Hotel()
+        {
+            return View();
+        }
+
+        //Cook Travel Business
+        public ActionResult CTB()
+        {
+            return View();
+        }
+
+        //Cook Travel Corporate
+
+        //Cook Travel Luxury
+
+        //Cook Travel Cruises
     }
 }
