@@ -3,7 +3,7 @@
 }
 
 <head>
-    <script type="text/javascript" language="javascript" id="OFrameworkJS" themeuri="cooktravelonline/OdyAirSearch/"
+    <script type="text/javascript" language="javascript" id="OFrameworkJS" ThemeURI="OdyAirSearch/"
         SkinID="default" src="https://book.cooktravel.net/web/SearchForms/OFramework.js"></script>
     @*<script type="text/javascript" language="javascript" id="OFrameworkJS" themeuri="OdyResponsiveSearchForm-Blue-Air/"
             skinid="default" src="http://book.cooktravel.net/web/SearchForms/OFramework.js"></script>*@
@@ -12,16 +12,17 @@
 </head>
 
 
-
+<body>
 @*<!--left searchform Area Start-->
 <div class="left-searchform-area"></div>
 <div id="AirSearchForm"></div>
 <!--left searchform Area end-->*@
 
 <div class="jumbotron">
-    <div class="left-searchform-area"><p>{ Left Searchform Area }</p>
+    <div id="AirSearchForm"></div>
+    @*<div class="left-searchform-area"><p>{ Left Searchform Area }</p>
         <div id="AirSearchForm"></div>
-    </div>
+    </div>*@
 </div>
 
 <div class="row">
@@ -47,11 +48,22 @@
 </div>
 
 
-<script language="javascript" type="text/javascript">
+@*<script language="javascript" type="text/javascript">
     if (OFramework != null) {
     OFramework.QSParams.Add("siid", "124589")
     OFramework.QSParams.Add("referrer", "google");
-    oAForm = OFramework.AirSearchForm(document.getElementById("AirSearchForm"));
+    oAForm =    OFramework.AirSearchForm(document.getElementById("AirSearchForm"));
     //oAForm.Target = "_new";
       }
+</script>*@
+
+<script language="javascript" type="text/javascript">
+    if (OFramework != null && (document.getElementById("AirSearchForm") != null || document.getElementById("AirSearchForm") != 'undefined')) {
+        OFramework.QSParams.Add("siid", "124589");
+        //OFramework.QSParams.Add("referrer", "google");
+        oAForm = OFramework.AirSearchForm(document.getElementById("AirSearchForm"));
+        oAForm.Target = "_new";
+    }
 </script>
+
+</body>
